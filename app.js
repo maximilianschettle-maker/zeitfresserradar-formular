@@ -6,6 +6,11 @@ const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxkdankhN4-bZ
 
 const ANDERE_VALUE = '__andere__'
 
+// Kennung aus dem personalisierten Link (z. B. ...?k=thomas-mueller). Wird unveraendert
+// mitgeschickt, damit sich eine Antwort dem angeschriebenen Empfaenger zuordnen laesst.
+// Bei einem weitergeleiteten oder blanken Link bleibt der Wert leer - das ist ok.
+const kennung = new URLSearchParams(window.location.search).get('k') || ''
+
 const data = window.ZEITFRESSER_FORM_DATA
 
 const branchenListe = document.getElementById('branchen-liste')
@@ -18,6 +23,7 @@ const fragenTitel = document.getElementById('fragen-titel')
 const checkboxListe = document.getElementById('checkbox-liste')
 const freitextLabel = document.getElementById('freitext-label')
 const freitextInput = document.getElementById('freitext-input')
+const absenderInput = document.getElementById('absender-input')
 const submitBtn = document.getElementById('submit-btn')
 const submitHinweis = document.getElementById('submit-hinweis')
 const form = document.getElementById('feedback-form')
@@ -171,6 +177,8 @@ async function handleSubmit(event) {
     ausgewaehltePunkte: istAndere ? [] : getAusgewaehlteThemen(),
     weitereZeitfresser: freitextInput.value.trim(),
     lead: getLeadWert(),
+    kennung: kennung,
+    absender: absenderInput.value.trim(),
   }
 
   submitBtn.disabled = true
