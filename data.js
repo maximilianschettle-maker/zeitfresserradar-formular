@@ -154,6 +154,16 @@ window.ZEITFRESSER_FORM_DATA = {
       "branche": "Umweltplanungsbüro",
       "groessen": [
         {
+          "groesse": "klein",
+          "beschreibung": "Einzelbuero oder kleines Planungsbuero bis ca. 5 Mitarbeitende",
+          "themen": [
+            "Honorarberechnung und Angebot von Hand",
+            "Belegsammlung und Aufbewahrungsfristen",
+            "Gelaendeprotokolle und Fotodokumentation zuordnen",
+            "Fristen und Behoerdentermine im Blick behalten"
+          ]
+        },
+        {
           "groesse": "mittel",
           "beschreibung": "Planungsbuero mit mehreren Projektteams, ca. 6-30 Mitarbeitende",
           "themen": [
@@ -162,12 +172,42 @@ window.ZEITFRESSER_FORM_DATA = {
             "Ausschreibungen ueber viele Vergabeportale verfolgen",
             "Datenabgabe an Behoerden in uneinheitlichen Formaten"
           ]
+        },
+        {
+          "groesse": "gross",
+          "beschreibung": "Planungsbuero mit mehreren Fachbereichen oder Standorten, ueber 30 Mitarbeitende",
+          "themen": [
+            "Qualitaetssicherung und Freigaben ueber Fachbereiche",
+            "Gebuendelte Vergaben ueber mehrere Fachrichtungen koordinieren",
+            "Projektdaten und Vertraege standortuebergreifend archivieren",
+            "Kapazitaetsplanung ueber Fachbereiche und Kartiersaison"
+          ]
         }
       ]
     },
     {
       "branche": "IT-Dienstleister",
       "groessen": [
+        {
+          "groesse": "klein",
+          "beschreibung": "Einzelunternehmer oder kleiner IT-Dienstleister bis ca. 5 Mitarbeitende",
+          "themen": [
+            "Supportanfragen ueber verstreute Kanaele",
+            "Kleine Aufwaende gehen bei der Abrechnung verloren",
+            "Rechnungen mit Leistungsnachweis erstellen",
+            "Belege und Steuerunterlagen sammeln"
+          ]
+        },
+        {
+          "groesse": "mittel",
+          "beschreibung": "IT-Dienstleister mit mehreren Technikern, ca. 6-30 Mitarbeitende",
+          "themen": [
+            "Wartungs- und Servicevertraege manuell fakturieren",
+            "Lizenzbestand je Kunde nachhalten",
+            "Keine gemeinsame Warteschlange fuer Anfragen",
+            "Hardwareangebote und Beschaffung abwickeln"
+          ]
+        },
         {
           "groesse": "gross",
           "beschreibung": "Systemhaus oder Managed-Service-Provider, ueber 30 Mitarbeitende",
