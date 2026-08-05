@@ -2,7 +2,7 @@
 // hier die Web-App-URL eintragen. Ohne URL wird nichts gesendet, es kommt aber trotzdem
 // die Danke-Meldung (siehe handleSubmit) - fuers lokale Testen ok, fuer den echten Einsatz
 // unbedingt eintragen.
-const GOOGLE_SCRIPT_URL = ''
+const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxkdankhN4-bZG2ne1BSGjzoszOWHQ8FsgLHXb5TypxE-p_L2hCO8BuDxR1SjbH0Cjn/exec'
 
 const ANDERE_VALUE = '__andere__'
 
