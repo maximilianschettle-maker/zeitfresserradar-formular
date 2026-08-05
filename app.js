@@ -6,6 +6,15 @@ const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxkdankhN4-bZ
 
 const ANDERE_VALUE = '__andere__'
 
+// Fuer nicht gelistete Branchen gibt es keine KB-Groessen. Diese generischen Stufen halten
+// die Schwellen identisch zu den KB-Tiers, damit eine spaetere Recherche weiss, welcher
+// Tier gemeint war - ohne Groesse liesse sich der Eintrag nicht einordnen.
+const GENERISCHE_GROESSEN = [
+  { groesse: 'klein', beschreibung: 'Ein-Mann-Betrieb bis ca. 5 Mitarbeitende' },
+  { groesse: 'mittel', beschreibung: 'ca. 6-30 Mitarbeitende' },
+  { groesse: 'gross', beschreibung: 'ueber 30 Mitarbeitende' },
+]
+
 // Kennung aus dem personalisierten Link (z. B. ...?k=thomas-mueller). Wird unveraendert
 // mitgeschickt, damit sich eine Antwort dem angeschriebenen Empfaenger zuordnen laesst.
 // Bei einem weitergeleiteten oder blanken Link bleibt der Wert leer - das ist ok.
@@ -58,20 +67,20 @@ function selectBranche(brancheEntry) {
   hideStep(stepFragen)
 
   if (brancheEntry === ANDERE_VALUE) {
-    hideStep(stepGroesse)
     stepBrancheFreitext.hidden = false
-    renderFragenFuerAndereBranche()
+    renderGroessen(GENERISCHE_GROESSEN)
+    stepGroesse.hidden = false
   } else {
     stepBrancheFreitext.hidden = true
     brancheFreitextInput.value = ''
-    renderGroessen(brancheEntry)
+    renderGroessen(brancheEntry.groessen)
     stepGroesse.hidden = false
   }
 }
 
-function renderGroessen(brancheEntry) {
+function renderGroessen(groessen) {
   groessenListe.innerHTML = ''
-  for (const groesseEntry of brancheEntry.groessen) {
+  for (const groesseEntry of groessen) {
     const li = document.createElement('li')
     const label = document.createElement('span')
     label.textContent = groesseEntry.groesse
@@ -88,7 +97,11 @@ function renderGroessen(brancheEntry) {
 function selectGroesse(groesseEntry) {
   ausgewaehlteGroesse = groesseEntry
   updateSelectionStyles(groessenListe, (li) => li.firstChild.textContent === groesseEntry.groesse)
-  renderFragenFuerBekannteBranche(groesseEntry)
+  if (ausgewaehlteBranche === ANDERE_VALUE) {
+    renderFragenFuerAndereBranche()
+  } else {
+    renderFragenFuerBekannteBranche(groesseEntry)
+  }
 }
 
 function updateSelectionStyles(list, matches) {
@@ -150,6 +163,7 @@ function validiere() {
   if (!ausgewaehlteBranche) return 'Bitte eine Branche wählen.'
   if (ausgewaehlteBranche === ANDERE_VALUE) {
     if (!brancheFreitextInput.value.trim()) return 'Bitte den Namen deiner Branche eintragen.'
+    if (!ausgewaehlteGroesse) return 'Bitte die Betriebsgröße wählen.'
     if (!freitextInput.value.trim()) return 'Bitte kurz beschreiben, was bei euch Zeit frisst.'
   } else if (!ausgewaehlteGroesse) {
     return 'Bitte die Betriebsgröße wählen.'
@@ -173,7 +187,7 @@ async function handleSubmit(event) {
   const payload = {
     branche: istAndere ? brancheFreitextInput.value.trim() : ausgewaehlteBranche.branche,
     brancheNichtGelistet: istAndere,
-    groesse: istAndere ? '' : ausgewaehlteGroesse.groesse,
+    groesse: ausgewaehlteGroesse ? ausgewaehlteGroesse.groesse : '',
     ausgewaehltePunkte: istAndere ? [] : getAusgewaehlteThemen(),
     weitereZeitfresser: freitextInput.value.trim(),
     lead: getLeadWert(),
