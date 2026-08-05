@@ -7,9 +7,8 @@ const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxkdankhN4-bZ
 const ANDERE_VALUE = '__andere__'
 
 // Fuer nicht gelistete Branchen gibt es keine KB-Groessen. Diese generischen Stufen halten
-// die Schwellen identisch zu den KB-Tiers, damit eine spaetere Recherche weiss, welcher
-// Tier gemeint war - ohne Groesse liesse sich der Eintrag nicht einordnen.
-// Schwellen identisch zu den KB-Tiers (siehe ab/bis in data/zeitfresser-kb.json).
+// die Schwellen identisch zu den KB-Tiers (siehe ab/bis in data/zeitfresser-kb.json), damit
+// eine spaetere Recherche weiss, welcher Tier gemeint war.
 const GENERISCHE_GROESSEN = [
   { groesse: 'klein', beschreibung: '1-5 Mitarbeitende', ab: 1, bis: 5 },
   { groesse: 'mittel', beschreibung: '6-30 Mitarbeitende', ab: 6, bis: 30 },
@@ -134,7 +133,7 @@ function pruefeMitarbeiterzahl() {
     (g) => (g.ab == null || zahl >= g.ab) && (g.bis == null || zahl <= g.bis)
   )
   groesseHinweis.textContent = passenderTier
-    ? `Mit ${zahl} Mitarbeitenden würden wir euch als „${passenderTier.groesse}" einordnen — du kannst trotzdem bei „${ausgewaehlteGroesse.groesse}" bleiben, wenn das besser passt.`
+    ? `Mit ${zahl} Mitarbeitenden würden wir den Betrieb als „${passenderTier.groesse}" einordnen — „${ausgewaehlteGroesse.groesse}" kann trotzdem stehen bleiben, wenn das besser passt.`
     : `Mit ${zahl} Mitarbeitenden passt keine unserer Stufen richtig — wir schauen uns das an.`
   groesseHinweis.hidden = false
 }
@@ -155,7 +154,7 @@ function hideStep(step) {
 }
 
 function renderFragenFuerBekannteBranche(groesseEntry) {
-  fragenTitel.textContent = `3. Welche Punkte treffen bei euch zu? (${ausgewaehlteBranche.branche} — ${groesseEntry.groesse})`
+  fragenTitel.textContent = `3. Welche Punkte treffen im Betrieb zu? (${ausgewaehlteBranche.branche} — ${groesseEntry.groesse})`
 
   checkboxListe.hidden = false
   checkboxListe.innerHTML = ''
@@ -170,7 +169,7 @@ function renderFragenFuerBekannteBranche(groesseEntry) {
     checkboxListe.appendChild(label)
   }
 
-  freitextLabel.textContent = 'Gibt es weitere Zeitfresser bei euch, die hier nicht aufgeführt sind?'
+  freitextLabel.textContent = 'Gibt es weitere Zeitfresser, die hier nicht aufgeführt sind?'
   freitextInput.required = false
   freitextInput.value = ''
 
@@ -178,12 +177,12 @@ function renderFragenFuerBekannteBranche(groesseEntry) {
 }
 
 function renderFragenFuerAndereBranche() {
-  fragenTitel.textContent = '3. Erzähl uns von euren Zeitfressern'
+  fragenTitel.textContent = '3. Welche Zeitfresser gibt es im Betrieb?'
 
   checkboxListe.hidden = true
   checkboxListe.innerHTML = ''
 
-  freitextLabel.textContent = 'Was sind bei euch aktuell die größten Zeitfresser im Arbeitsalltag?'
+  freitextLabel.textContent = 'Was sind aktuell die größten Zeitfresser im Arbeitsalltag?'
   freitextInput.required = true
   freitextInput.value = ''
 
@@ -202,9 +201,9 @@ function getLeadWert() {
 function validiere() {
   if (!ausgewaehlteBranche) return 'Bitte eine Branche wählen.'
   if (ausgewaehlteBranche === ANDERE_VALUE) {
-    if (!brancheFreitextInput.value.trim()) return 'Bitte den Namen deiner Branche eintragen.'
+    if (!brancheFreitextInput.value.trim()) return 'Bitte den Namen der Branche eintragen.'
     if (!ausgewaehlteGroesse) return 'Bitte die Betriebsgröße wählen.'
-    if (!freitextInput.value.trim()) return 'Bitte kurz beschreiben, was bei euch Zeit frisst.'
+    if (!freitextInput.value.trim()) return 'Bitte kurz beschreiben, was Zeit frisst.'
   } else if (!ausgewaehlteGroesse) {
     return 'Bitte die Betriebsgröße wählen.'
   }
@@ -255,7 +254,7 @@ async function handleSubmit(event) {
     danke.hidden = false
   } catch (err) {
     console.error(err)
-    fehler.textContent = "Da ist etwas schiefgelaufen — bitte versuch's gleich nochmal."
+    fehler.textContent = "Da ist etwas schiefgelaufen — bitte gleich nochmal versuchen."
     fehler.hidden = false
   } finally {
     submitBtn.disabled = false

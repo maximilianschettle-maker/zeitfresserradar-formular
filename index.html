@@ -9,23 +9,23 @@
 <body>
   <header>
     <h1>ZeitfresserRadar — Kurzumfrage</h1>
-    <p class="subtitle">2–3 Minuten. Deine Angaben werden nur intern ausgewertet. Hilf uns, die häufigsten Zeitfresser in deiner Branche zu bestätigen.</p>
+    <p class="subtitle">2–3 Minuten. Die Angaben werden nur intern ausgewertet und helfen dabei, die häufigsten Zeitfresser je Branche zu bestätigen.</p>
   </header>
 
   <main>
     <form id="feedback-form" novalidate>
       <section class="step" id="step-branche">
-        <h2>1. In welcher Branche bist du tätig?</h2>
+        <h2>1. In welcher Branche ist der Betrieb tätig?</h2>
         <ul id="branchen-liste" class="select-list"></ul>
       </section>
 
       <section class="step" id="step-branche-freitext" hidden>
-        <h2>Wie heißt deine Branche?</h2>
+        <h2>Um welche Branche handelt es sich?</h2>
         <input type="text" id="branche-freitext-input" placeholder="z. B. Physiotherapie, Kfz-Werkstatt, …">
       </section>
 
       <section class="step" id="step-groesse" hidden>
-        <h2>2. Wie groß ist euer Betrieb?</h2>
+        <h2>2. Wie groß ist der Betrieb?</h2>
         <ul id="groessen-liste" class="select-list"></ul>
 
         <div class="feld-block feld-block-eng">
@@ -36,12 +36,12 @@
       </section>
 
       <section class="step" id="step-fragen" hidden>
-        <h2 id="fragen-titel">3. Welche Punkte treffen bei euch zu?</h2>
+        <h2 id="fragen-titel">3. Welche Punkte treffen im Betrieb zu?</h2>
 
         <div id="checkbox-liste" class="checkbox-liste"></div>
 
         <div id="freitext-block" class="feld-block">
-          <label id="freitext-label" for="freitext-input">Gibt es weitere Zeitfresser bei euch, die hier nicht aufgeführt sind?</label>
+          <label id="freitext-label" for="freitext-input">Gibt es weitere Zeitfresser, die hier nicht aufgeführt sind?</label>
           <textarea id="freitext-input" rows="3"></textarea>
         </div>
 
@@ -51,9 +51,9 @@
         </div>
 
         <div class="feld-block lead-frage">
-          <p>Hättest du Interesse an einem unverbindlichen Gespräch, wie sich diese Punkte automatisieren lassen?</p>
+          <p>Besteht Interesse an einem unverbindlichen Gespräch, wie sich diese Punkte automatisieren lassen?</p>
           <label class="radio-label"><input type="radio" name="lead" value="Ja, gerne"> Ja, gerne</label>
-          <label class="radio-label"><input type="radio" name="lead" value="Vielleicht, erzähl mir mehr"> Vielleicht, erzähl mir mehr</label>
+          <label class="radio-label"><input type="radio" name="lead" value="Vielleicht, erzähl mir mehr"> Vielleicht, gerne mehr Infos</label>
           <label class="radio-label"><input type="radio" name="lead" value="Nein, aktuell nicht"> Nein, aktuell nicht</label>
         </div>
 
@@ -62,8 +62,8 @@
       </section>
     </form>
 
-    <p id="danke" class="danke" role="status" hidden>Danke für deine Antworten! 🙌</p>
-    <p id="fehler" class="fehler" role="alert" hidden>Da ist etwas schiefgelaufen — bitte versuch's gleich nochmal.</p>
+    <p id="danke" class="danke" role="status" hidden>Danke für die Antworten! 🙌</p>
+    <p id="fehler" class="fehler" role="alert" hidden>Da ist etwas schiefgelaufen — bitte gleich nochmal versuchen.</p>
   </main>
 
   <script src="data.js"></script>
