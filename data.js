@@ -149,6 +149,37 @@ window.ZEITFRESSER_FORM_DATA = {
           ]
         }
       ]
+    },
+    {
+      "branche": "Umweltplanungsbüro",
+      "groessen": [
+        {
+          "groesse": "mittel",
+          "beschreibung": "Planungsbuero mit mehreren Projektteams, ca. 6-30 Mitarbeitende",
+          "themen": [
+            "Kartierungsdaten aus dem Gelaende nacherfassen",
+            "Projektcontrolling und Stunden auf Leistungsphasen",
+            "Ausschreibungen ueber viele Vergabeportale verfolgen",
+            "Datenabgabe an Behoerden in uneinheitlichen Formaten"
+          ]
+        }
+      ]
+    },
+    {
+      "branche": "IT-Dienstleister",
+      "groessen": [
+        {
+          "groesse": "gross",
+          "beschreibung": "Systemhaus oder Managed-Service-Provider, ueber 30 Mitarbeitende",
+          "themen": [
+            "Erbrachte Leistungen zeitgenau abrechnen",
+            "Ticketsystem waechst nicht mit den Serviceprozessen mit",
+            "Kundendokumentation ueber Systeme verstreut",
+            "Technikerdisposition ueber mehrere Teams",
+            "SLA-Reporting fuer Kunden manuell zusammenstellen"
+          ]
+        }
+      ]
     }
   ]
 }
