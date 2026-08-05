@@ -3,87 +3,42 @@
 window.ZEITFRESSER_FORM_DATA = {
   "branchen": [
     {
-      "branche": "Handwerk",
+      "branche": "Ambulanter Pflegedienst",
       "groessen": [
         {
           "groesse": "klein",
-          "beschreibung": "Ein-Mann-Betrieb oder kleiner Betrieb, 1-5 Mitarbeitende",
+          "beschreibung": "Kleiner Pflegedienst, 1-5 Mitarbeitende",
           "ab": 1,
           "bis": 5,
           "themen": [
-            "Angebots- und Rechnungserstellung von Hand",
-            "Terminkoordination per Telefon",
-            "Stundenzettel auf Papier",
-            "Materialbestellung ohne festen Prozess",
-            "Belegsammlung fuer die Steuer"
+            "Pflegedokumentation neben der Versorgung",
+            "Tourenplanung bei jedem Ausfall neu bauen",
+            "Leistungsnachweise auf Papier",
+            "Abrechnung mit den Kostentraegern"
           ]
         },
         {
           "groesse": "mittel",
-          "beschreibung": "Betrieb mit mehreren Kolonnen/Teams, 6-30 Mitarbeitende",
+          "beschreibung": "Pflegedienst mit mehreren Touren und Teams, 6-30 Mitarbeitende",
           "ab": 6,
           "bis": 30,
           "themen": [
-            "Personaleinsatzplanung fuer mehrere Kolonnen in Excel",
-            "Stundenzettel/Aufmass ueber mehrere Baustellen konsolidieren",
-            "Mehrfache Dateneingabe zwischen Systemen",
-            "Koordination von Material, Fahrzeugen und Maschinen zwischen Kolonnen"
+            "Dienstplanung mit Qualifikationen und Ausfaellen",
+            "Nachweispflichten fuer Qualitaetspruefungen",
+            "Mehrfacherfassung zwischen Doku, Abrechnung und Lohn",
+            "Abstimmung mit Angehoerigen und Aerzten"
           ]
         },
         {
           "groesse": "gross",
-          "beschreibung": "Betrieb mit mehreren Standorten/Betriebsteilen, ab 31 Mitarbeitende",
+          "beschreibung": "Pflegedienst mit mehreren Standorten oder Versorgungsformen, ab 31 Mitarbeitende",
           "ab": 31,
           "bis": null,
           "themen": [
-            "Betriebsmittel- und Maschinenverwaltung ueber mehrere Standorte",
-            "Kein einheitliches ERP-System ueber die Betriebsteile",
-            "Standortuebergreifende Auftrags- und Kapazitaetssteuerung",
-            "Uneinheitliche Prozesse zwischen Betriebsteilen",
-            "Change-Management bei der Digitalisierung ueber mehrere Standorte"
-          ]
-        }
-      ]
-    },
-    {
-      "branche": "Steuerberater",
-      "groessen": [
-        {
-          "groesse": "klein",
-          "beschreibung": "Einzelkanzlei, 1-5 Mitarbeitende",
-          "ab": 1,
-          "bis": 5,
-          "themen": [
-            "Beleg- und Unterlagenanforderung bei Mandanten",
-            "Manuelle Datenuebernahme aus Kassensystemen und Kontoauszuegen",
-            "Fristueberwachung in Kopf/Papierkalender",
-            "Rechnungsstellung an Mandanten von Hand",
-            "Belegerfassung ohne automatische Kontierung"
-          ]
-        },
-        {
-          "groesse": "mittel",
-          "beschreibung": "Kanzlei mit mehreren Beratern/Teams, 6-30 Mitarbeitende",
-          "ab": 6,
-          "bis": 30,
-          "themen": [
-            "Interne Abstimmung zwischen Sachbearbeitung und Beratung",
-            "Reporting fuer Mandanten manuell zusammenstellen",
-            "Ueberblick ueber viele Mandate mit individuellen Anforderungen",
-            "Kapazitaets- und Jahresplanung der Kanzlei ohne strukturiertes Tool"
-          ]
-        },
-        {
-          "groesse": "gross",
-          "beschreibung": "Ueberregionale Kanzlei mit mehreren Standorten, ab 31 Mitarbeitende",
-          "ab": 31,
-          "bis": null,
-          "themen": [
-            "Rekrutierung und Onboarding ueber mehrere Standorte",
-            "Individuelle Sonderwege statt standardisierter Prozesse",
-            "Dezentrale Datenhaltung zwischen Standorten",
-            "Ressourcenausgleich zwischen Standorten bei saisonalen Spitzen",
-            "Konsolidiertes Reporting fuers Kanzlei-Management"
+            "Standortuebergreifende Touren- und Personalsteuerung",
+            "Uneinheitliche Dokumentationsstandards",
+            "Controlling je Standort und Leistungsart",
+            "Verwaltung rund um Personalgewinnung und Einarbeitung"
           ]
         }
       ]
@@ -132,85 +87,85 @@ window.ZEITFRESSER_FORM_DATA = {
       ]
     },
     {
-      "branche": "Zahnärzte",
+      "branche": "Handwerk",
       "groessen": [
         {
           "groesse": "klein",
-          "beschreibung": "Einzelpraxis, 1-5 Mitarbeitende",
+          "beschreibung": "Ein-Mann-Betrieb oder kleiner Betrieb, 1-5 Mitarbeitende",
           "ab": 1,
           "bis": 5,
           "themen": [
-            "Terminausfaelle ohne Erinnerungssystem",
-            "Recall fuer Kontroll- und Prophylaxetermine von Hand",
-            "Fehleranfaellige KZV- und Privatabrechnung",
-            "Offene Rechnungen manuell nachverfolgen",
-            "Medienbrueche zwischen Roentgenbildern und Patientenakte"
+            "Angebots- und Rechnungserstellung von Hand",
+            "Terminkoordination per Telefon",
+            "Stundenzettel auf Papier",
+            "Materialbestellung ohne festen Prozess",
+            "Belegsammlung fuer die Steuer"
           ]
         },
         {
           "groesse": "mittel",
-          "beschreibung": "Gemeinschaftspraxis mit mehreren Behandlern, 6-30 Mitarbeitende",
+          "beschreibung": "Betrieb mit mehreren Kolonnen/Teams, 6-30 Mitarbeitende",
           "ab": 6,
           "bis": 30,
           "themen": [
-            "Getrennte Patientenakten je Behandler",
-            "Terminplanung ueber mehrere Behandler und Stuehle",
-            "Unstrukturierte interne Kommunikation im groesseren Team",
-            "Personaleinsatzplanung fuer wachsendes Praxisteam"
+            "Personaleinsatzplanung fuer mehrere Kolonnen in Excel",
+            "Stundenzettel/Aufmass ueber mehrere Baustellen konsolidieren",
+            "Mehrfache Dateneingabe zwischen Systemen",
+            "Koordination von Material, Fahrzeugen und Maschinen zwischen Kolonnen"
           ]
         },
         {
           "groesse": "gross",
-          "beschreibung": "Zahnaerztliches MVZ mit mehreren Standorten, ab 31 Mitarbeitende",
+          "beschreibung": "Betrieb mit mehreren Standorten/Betriebsteilen, ab 31 Mitarbeitende",
           "ab": 31,
           "bis": null,
           "themen": [
-            "Insellösungen zwischen Standorten statt zentraler MVZ-Software",
-            "Konsolidierte Abrechnung ueber KV, Privat und BG je Standort",
-            "Synchrone Patientendaten an jedem Standort sicherstellen",
-            "IT-Support und Infrastruktur ueber mehrere Standorte",
-            "Standortuebergreifende Personal- und Kapazitaetsplanung"
+            "Betriebsmittel- und Maschinenverwaltung ueber mehrere Standorte",
+            "Kein einheitliches ERP-System ueber die Betriebsteile",
+            "Standortuebergreifende Auftrags- und Kapazitaetssteuerung",
+            "Uneinheitliche Prozesse zwischen Betriebsteilen",
+            "Change-Management bei der Digitalisierung ueber mehrere Standorte"
           ]
         }
       ]
     },
     {
-      "branche": "Umweltplanungsbüro",
+      "branche": "Immobilienverwaltung",
       "groessen": [
         {
           "groesse": "klein",
-          "beschreibung": "Einzelbuero oder kleines Planungsbuero, 1-5 Mitarbeitende",
+          "beschreibung": "Einzelverwalter oder kleine Hausverwaltung, 1-5 Mitarbeitende",
           "ab": 1,
           "bis": 5,
           "themen": [
-            "Honorarberechnung und Angebot von Hand",
-            "Belegsammlung und Aufbewahrungsfristen",
-            "Gelaendeprotokolle und Fotodokumentation zuordnen",
-            "Fristen und Behoerdentermine im Blick behalten"
+            "Nebenkostenabrechnung aus Belegen zusammensuchen",
+            "Mieteingaenge von Hand abgleichen",
+            "Mieter- und Eigentueneranfragen ohne Historie beantworten",
+            "Handwerkerkoordination bei Schadensmeldungen"
           ]
         },
         {
           "groesse": "mittel",
-          "beschreibung": "Planungsbuero mit mehreren Projektteams, 6-30 Mitarbeitende",
+          "beschreibung": "Verwaltung mit mehreren Objektbetreuern, 6-30 Mitarbeitende",
           "ab": 6,
           "bis": 30,
           "themen": [
-            "Kartierungsdaten aus dem Gelaende nacherfassen",
-            "Projektcontrolling und Stunden auf Leistungsphasen",
-            "Ausschreibungen ueber viele Vergabeportale verfolgen",
-            "Datenabgabe an Behoerden in uneinheitlichen Formaten"
+            "Eigentuemerversammlungen vorbereiten und nachbereiten",
+            "Wissen zu Objekten haengt an einzelnen Betreuern",
+            "Wiederkehrende Fristen ueber viele Objekte im Blick behalten",
+            "Stammdaten in mehreren Systemen pflegen"
           ]
         },
         {
           "groesse": "gross",
-          "beschreibung": "Planungsbuero mit mehreren Fachbereichen oder Standorten, ab 31 Mitarbeitende",
+          "beschreibung": "Verwaltung mit mehreren Teams oder Standorten, ab 31 Mitarbeitende",
           "ab": 31,
           "bis": null,
           "themen": [
-            "Qualitaetssicherung und Freigaben ueber Fachbereiche",
-            "Gebuendelte Vergaben ueber mehrere Fachrichtungen koordinieren",
-            "Projektdaten und Vertraege standortuebergreifend archivieren",
-            "Kapazitaetsplanung ueber Fachbereiche und Kartiersaison"
+            "Uneinheitliche Ablaeufe zwischen Teams und Standorten",
+            "Reporting an institutionelle Eigentuemer erstellen",
+            "Schnittstellen zwischen Verwaltung, Buchhaltung und Bank",
+            "Nachweis- und Dokumentationspflichten belegen"
           ]
         }
       ]
@@ -258,47 +213,6 @@ window.ZEITFRESSER_FORM_DATA = {
       ]
     },
     {
-      "branche": "Immobilienverwaltung",
-      "groessen": [
-        {
-          "groesse": "klein",
-          "beschreibung": "Einzelverwalter oder kleine Hausverwaltung, 1-5 Mitarbeitende",
-          "ab": 1,
-          "bis": 5,
-          "themen": [
-            "Nebenkostenabrechnung aus Belegen zusammensuchen",
-            "Mieteingaenge von Hand abgleichen",
-            "Mieter- und Eigentueneranfragen ohne Historie beantworten",
-            "Handwerkerkoordination bei Schadensmeldungen"
-          ]
-        },
-        {
-          "groesse": "mittel",
-          "beschreibung": "Verwaltung mit mehreren Objektbetreuern, 6-30 Mitarbeitende",
-          "ab": 6,
-          "bis": 30,
-          "themen": [
-            "Eigentuemerversammlungen vorbereiten und nachbereiten",
-            "Wissen zu Objekten haengt an einzelnen Betreuern",
-            "Wiederkehrende Fristen ueber viele Objekte im Blick behalten",
-            "Stammdaten in mehreren Systemen pflegen"
-          ]
-        },
-        {
-          "groesse": "gross",
-          "beschreibung": "Verwaltung mit mehreren Teams oder Standorten, ab 31 Mitarbeitende",
-          "ab": 31,
-          "bis": null,
-          "themen": [
-            "Uneinheitliche Ablaeufe zwischen Teams und Standorten",
-            "Reporting an institutionelle Eigentuemer erstellen",
-            "Schnittstellen zwischen Verwaltung, Buchhaltung und Bank",
-            "Nachweis- und Dokumentationspflichten belegen"
-          ]
-        }
-      ]
-    },
-    {
       "branche": "Rechtsanwaltskanzlei",
       "groessen": [
         {
@@ -340,42 +254,128 @@ window.ZEITFRESSER_FORM_DATA = {
       ]
     },
     {
-      "branche": "Ambulanter Pflegedienst",
+      "branche": "Steuerberater",
       "groessen": [
         {
           "groesse": "klein",
-          "beschreibung": "Kleiner Pflegedienst, 1-5 Mitarbeitende",
+          "beschreibung": "Einzelkanzlei, 1-5 Mitarbeitende",
           "ab": 1,
           "bis": 5,
           "themen": [
-            "Pflegedokumentation neben der Versorgung",
-            "Tourenplanung bei jedem Ausfall neu bauen",
-            "Leistungsnachweise auf Papier",
-            "Abrechnung mit den Kostentraegern"
+            "Beleg- und Unterlagenanforderung bei Mandanten",
+            "Manuelle Datenuebernahme aus Kassensystemen und Kontoauszuegen",
+            "Fristueberwachung in Kopf/Papierkalender",
+            "Rechnungsstellung an Mandanten von Hand",
+            "Belegerfassung ohne automatische Kontierung"
           ]
         },
         {
           "groesse": "mittel",
-          "beschreibung": "Pflegedienst mit mehreren Touren und Teams, 6-30 Mitarbeitende",
+          "beschreibung": "Kanzlei mit mehreren Beratern/Teams, 6-30 Mitarbeitende",
           "ab": 6,
           "bis": 30,
           "themen": [
-            "Dienstplanung mit Qualifikationen und Ausfaellen",
-            "Nachweispflichten fuer Qualitaetspruefungen",
-            "Mehrfacherfassung zwischen Doku, Abrechnung und Lohn",
-            "Abstimmung mit Angehoerigen und Aerzten"
+            "Interne Abstimmung zwischen Sachbearbeitung und Beratung",
+            "Reporting fuer Mandanten manuell zusammenstellen",
+            "Ueberblick ueber viele Mandate mit individuellen Anforderungen",
+            "Kapazitaets- und Jahresplanung der Kanzlei ohne strukturiertes Tool"
           ]
         },
         {
           "groesse": "gross",
-          "beschreibung": "Pflegedienst mit mehreren Standorten oder Versorgungsformen, ab 31 Mitarbeitende",
+          "beschreibung": "Ueberregionale Kanzlei mit mehreren Standorten, ab 31 Mitarbeitende",
           "ab": 31,
           "bis": null,
           "themen": [
-            "Standortuebergreifende Touren- und Personalsteuerung",
-            "Uneinheitliche Dokumentationsstandards",
-            "Controlling je Standort und Leistungsart",
-            "Verwaltung rund um Personalgewinnung und Einarbeitung"
+            "Rekrutierung und Onboarding ueber mehrere Standorte",
+            "Individuelle Sonderwege statt standardisierter Prozesse",
+            "Dezentrale Datenhaltung zwischen Standorten",
+            "Ressourcenausgleich zwischen Standorten bei saisonalen Spitzen",
+            "Konsolidiertes Reporting fuers Kanzlei-Management"
+          ]
+        }
+      ]
+    },
+    {
+      "branche": "Umweltplanungsbüro",
+      "groessen": [
+        {
+          "groesse": "klein",
+          "beschreibung": "Einzelbuero oder kleines Planungsbuero, 1-5 Mitarbeitende",
+          "ab": 1,
+          "bis": 5,
+          "themen": [
+            "Honorarberechnung und Angebot von Hand",
+            "Belegsammlung und Aufbewahrungsfristen",
+            "Gelaendeprotokolle und Fotodokumentation zuordnen",
+            "Fristen und Behoerdentermine im Blick behalten"
+          ]
+        },
+        {
+          "groesse": "mittel",
+          "beschreibung": "Planungsbuero mit mehreren Projektteams, 6-30 Mitarbeitende",
+          "ab": 6,
+          "bis": 30,
+          "themen": [
+            "Kartierungsdaten aus dem Gelaende nacherfassen",
+            "Projektcontrolling und Stunden auf Leistungsphasen",
+            "Ausschreibungen ueber viele Vergabeportale verfolgen",
+            "Datenabgabe an Behoerden in uneinheitlichen Formaten"
+          ]
+        },
+        {
+          "groesse": "gross",
+          "beschreibung": "Planungsbuero mit mehreren Fachbereichen oder Standorten, ab 31 Mitarbeitende",
+          "ab": 31,
+          "bis": null,
+          "themen": [
+            "Qualitaetssicherung und Freigaben ueber Fachbereiche",
+            "Gebuendelte Vergaben ueber mehrere Fachrichtungen koordinieren",
+            "Projektdaten und Vertraege standortuebergreifend archivieren",
+            "Kapazitaetsplanung ueber Fachbereiche und Kartiersaison"
+          ]
+        }
+      ]
+    },
+    {
+      "branche": "Zahnärzte",
+      "groessen": [
+        {
+          "groesse": "klein",
+          "beschreibung": "Einzelpraxis, 1-5 Mitarbeitende",
+          "ab": 1,
+          "bis": 5,
+          "themen": [
+            "Terminausfaelle ohne Erinnerungssystem",
+            "Recall fuer Kontroll- und Prophylaxetermine von Hand",
+            "Fehleranfaellige KZV- und Privatabrechnung",
+            "Offene Rechnungen manuell nachverfolgen",
+            "Medienbrueche zwischen Roentgenbildern und Patientenakte"
+          ]
+        },
+        {
+          "groesse": "mittel",
+          "beschreibung": "Gemeinschaftspraxis mit mehreren Behandlern, 6-30 Mitarbeitende",
+          "ab": 6,
+          "bis": 30,
+          "themen": [
+            "Getrennte Patientenakten je Behandler",
+            "Terminplanung ueber mehrere Behandler und Stuehle",
+            "Unstrukturierte interne Kommunikation im groesseren Team",
+            "Personaleinsatzplanung fuer wachsendes Praxisteam"
+          ]
+        },
+        {
+          "groesse": "gross",
+          "beschreibung": "Zahnaerztliches MVZ mit mehreren Standorten, ab 31 Mitarbeitende",
+          "ab": 31,
+          "bis": null,
+          "themen": [
+            "Insellösungen zwischen Standorten statt zentraler MVZ-Software",
+            "Konsolidierte Abrechnung ueber KV, Privat und BG je Standort",
+            "Synchrone Patientendaten an jedem Standort sicherstellen",
+            "IT-Support und Infrastruktur ueber mehrere Standorte",
+            "Standortuebergreifende Personal- und Kapazitaetsplanung"
           ]
         }
       ]
