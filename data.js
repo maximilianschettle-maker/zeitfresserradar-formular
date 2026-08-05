@@ -256,6 +256,129 @@ window.ZEITFRESSER_FORM_DATA = {
           ]
         }
       ]
+    },
+    {
+      "branche": "Immobilienverwaltung",
+      "groessen": [
+        {
+          "groesse": "klein",
+          "beschreibung": "Einzelverwalter oder kleine Hausverwaltung, 1-5 Mitarbeitende",
+          "ab": 1,
+          "bis": 5,
+          "themen": [
+            "Nebenkostenabrechnung aus Belegen zusammensuchen",
+            "Mieteingaenge von Hand abgleichen",
+            "Mieter- und Eigentueneranfragen ohne Historie beantworten",
+            "Handwerkerkoordination bei Schadensmeldungen"
+          ]
+        },
+        {
+          "groesse": "mittel",
+          "beschreibung": "Verwaltung mit mehreren Objektbetreuern, 6-30 Mitarbeitende",
+          "ab": 6,
+          "bis": 30,
+          "themen": [
+            "Eigentuemerversammlungen vorbereiten und nachbereiten",
+            "Wissen zu Objekten haengt an einzelnen Betreuern",
+            "Wiederkehrende Fristen ueber viele Objekte im Blick behalten",
+            "Stammdaten in mehreren Systemen pflegen"
+          ]
+        },
+        {
+          "groesse": "gross",
+          "beschreibung": "Verwaltung mit mehreren Teams oder Standorten, ab 31 Mitarbeitende",
+          "ab": 31,
+          "bis": null,
+          "themen": [
+            "Uneinheitliche Ablaeufe zwischen Teams und Standorten",
+            "Reporting an institutionelle Eigentuemer erstellen",
+            "Schnittstellen zwischen Verwaltung, Buchhaltung und Bank",
+            "Nachweis- und Dokumentationspflichten belegen"
+          ]
+        }
+      ]
+    },
+    {
+      "branche": "Rechtsanwaltskanzlei",
+      "groessen": [
+        {
+          "groesse": "klein",
+          "beschreibung": "Einzelanwalt oder kleine Kanzlei, 1-5 Mitarbeitende",
+          "ab": 1,
+          "bis": 5,
+          "themen": [
+            "Mandatsanlage und Akte aus Anhaengen zusammenstellen",
+            "Schriftsatzentwuerfe wiederholt neu schreiben",
+            "Fristenkontrolle neben dem Tagesgeschaeft",
+            "beA-Postfach von Hand abarbeiten"
+          ]
+        },
+        {
+          "groesse": "mittel",
+          "beschreibung": "Kanzlei mit mehreren Berufstraegern, 6-30 Mitarbeitende",
+          "ab": 6,
+          "bis": 30,
+          "themen": [
+            "Aktenstand teamuebergreifend nachvollziehen",
+            "Zeiterfassung und Abrechnung nach RVG oder Stundensatz",
+            "Statusanfragen von Mandanten beantworten",
+            "Vertraulichkeit beim Einsatz von Cloud und KI klaeren"
+          ]
+        },
+        {
+          "groesse": "gross",
+          "beschreibung": "Kanzlei mit mehreren Dezernaten oder Standorten, ab 31 Mitarbeitende",
+          "ab": 31,
+          "bis": null,
+          "themen": [
+            "Uneinheitliche Vorlagen und Qualitaetsstandards",
+            "Massenverfahren industriell abwickeln",
+            "Auslastung und Wirtschaftlichkeit je Dezernat auswerten",
+            "Einarbeitung neuer Mitarbeitender"
+          ]
+        }
+      ]
+    },
+    {
+      "branche": "Ambulanter Pflegedienst",
+      "groessen": [
+        {
+          "groesse": "klein",
+          "beschreibung": "Kleiner Pflegedienst, 1-5 Mitarbeitende",
+          "ab": 1,
+          "bis": 5,
+          "themen": [
+            "Pflegedokumentation neben der Versorgung",
+            "Tourenplanung bei jedem Ausfall neu bauen",
+            "Leistungsnachweise auf Papier",
+            "Abrechnung mit den Kostentraegern"
+          ]
+        },
+        {
+          "groesse": "mittel",
+          "beschreibung": "Pflegedienst mit mehreren Touren und Teams, 6-30 Mitarbeitende",
+          "ab": 6,
+          "bis": 30,
+          "themen": [
+            "Dienstplanung mit Qualifikationen und Ausfaellen",
+            "Nachweispflichten fuer Qualitaetspruefungen",
+            "Mehrfacherfassung zwischen Doku, Abrechnung und Lohn",
+            "Abstimmung mit Angehoerigen und Aerzten"
+          ]
+        },
+        {
+          "groesse": "gross",
+          "beschreibung": "Pflegedienst mit mehreren Standorten oder Versorgungsformen, ab 31 Mitarbeitende",
+          "ab": 31,
+          "bis": null,
+          "themen": [
+            "Standortuebergreifende Touren- und Personalsteuerung",
+            "Uneinheitliche Dokumentationsstandards",
+            "Controlling je Standort und Leistungsart",
+            "Verwaltung rund um Personalgewinnung und Einarbeitung"
+          ]
+        }
+      ]
     }
   ]
 }
