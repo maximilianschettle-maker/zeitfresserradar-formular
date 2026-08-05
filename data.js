@@ -7,7 +7,9 @@ window.ZEITFRESSER_FORM_DATA = {
       "groessen": [
         {
           "groesse": "klein",
-          "beschreibung": "Ein-Mann-Betrieb bis ca. 5 Mitarbeitende",
+          "beschreibung": "Ein-Mann-Betrieb oder kleiner Betrieb, 1-5 Mitarbeitende",
+          "ab": 1,
+          "bis": 5,
           "themen": [
             "Angebots- und Rechnungserstellung von Hand",
             "Terminkoordination per Telefon",
@@ -18,7 +20,9 @@ window.ZEITFRESSER_FORM_DATA = {
         },
         {
           "groesse": "mittel",
-          "beschreibung": "Betrieb mit mehreren Kolonnen/Teams, ca. 6-30 Mitarbeitende",
+          "beschreibung": "Betrieb mit mehreren Kolonnen/Teams, 6-30 Mitarbeitende",
+          "ab": 6,
+          "bis": 30,
           "themen": [
             "Personaleinsatzplanung fuer mehrere Kolonnen in Excel",
             "Stundenzettel/Aufmass ueber mehrere Baustellen konsolidieren",
@@ -28,7 +32,9 @@ window.ZEITFRESSER_FORM_DATA = {
         },
         {
           "groesse": "gross",
-          "beschreibung": "Betrieb mit mehreren Standorten/Betriebsteilen, ca. 31-100 Mitarbeitende",
+          "beschreibung": "Betrieb mit mehreren Standorten/Betriebsteilen, ab 31 Mitarbeitende",
+          "ab": 31,
+          "bis": null,
           "themen": [
             "Betriebsmittel- und Maschinenverwaltung ueber mehrere Standorte",
             "Kein einheitliches ERP-System ueber die Betriebsteile",
@@ -44,7 +50,9 @@ window.ZEITFRESSER_FORM_DATA = {
       "groessen": [
         {
           "groesse": "klein",
-          "beschreibung": "Einzelkanzlei bis ca. 5 Mitarbeitende",
+          "beschreibung": "Einzelkanzlei, 1-5 Mitarbeitende",
+          "ab": 1,
+          "bis": 5,
           "themen": [
             "Beleg- und Unterlagenanforderung bei Mandanten",
             "Manuelle Datenuebernahme aus Kassensystemen und Kontoauszuegen",
@@ -55,7 +63,9 @@ window.ZEITFRESSER_FORM_DATA = {
         },
         {
           "groesse": "mittel",
-          "beschreibung": "Kanzlei mit mehreren Beratern/Teams, ca. 6-25 Mitarbeitende",
+          "beschreibung": "Kanzlei mit mehreren Beratern/Teams, 6-30 Mitarbeitende",
+          "ab": 6,
+          "bis": 30,
           "themen": [
             "Interne Abstimmung zwischen Sachbearbeitung und Beratung",
             "Reporting fuer Mandanten manuell zusammenstellen",
@@ -65,7 +75,9 @@ window.ZEITFRESSER_FORM_DATA = {
         },
         {
           "groesse": "gross",
-          "beschreibung": "Ueberregionale Kanzlei mit mehreren Standorten, ca. 26-80 Mitarbeitende",
+          "beschreibung": "Ueberregionale Kanzlei mit mehreren Standorten, ab 31 Mitarbeitende",
+          "ab": 31,
+          "bis": null,
           "themen": [
             "Rekrutierung und Onboarding ueber mehrere Standorte",
             "Individuelle Sonderwege statt standardisierter Prozesse",
@@ -81,7 +93,9 @@ window.ZEITFRESSER_FORM_DATA = {
       "groessen": [
         {
           "groesse": "klein",
-          "beschreibung": "Buchhaltungsbuero/interne Buchhaltung bis ca. 5 Mitarbeitende",
+          "beschreibung": "Buchhaltungsbuero/interne Buchhaltung, 1-5 Mitarbeitende",
+          "ab": 1,
+          "bis": 5,
           "themen": [
             "Rechnungspruefung und -freigabe per E-Mail-Kette",
             "Zahlungsabgleich per Hand",
@@ -92,7 +106,9 @@ window.ZEITFRESSER_FORM_DATA = {
         },
         {
           "groesse": "mittel",
-          "beschreibung": "Buero mit mehreren Mandanten/groesserem Team, ca. 6-20 Mitarbeitende",
+          "beschreibung": "Buero mit mehreren Mandanten/groesserem Team, 6-30 Mitarbeitende",
+          "ab": 6,
+          "bis": 30,
           "themen": [
             "Mandantenverwaltung ueber getrennte Einzelsysteme",
             "Medienbrueche zwischen verschiedenen Mandanten-Tools",
@@ -102,7 +118,9 @@ window.ZEITFRESSER_FORM_DATA = {
         },
         {
           "groesse": "gross",
-          "beschreibung": "Mehrere Standorte/Teams, ca. 21-60 Mitarbeitende",
+          "beschreibung": "Mehrere Standorte/Teams, ab 31 Mitarbeitende",
+          "ab": 31,
+          "bis": null,
           "themen": [
             "Insellösungen zwischen Standorten",
             "Fehlende Schnittstellen zwischen Vorsystemen und Buchhaltung",
@@ -118,7 +136,9 @@ window.ZEITFRESSER_FORM_DATA = {
       "groessen": [
         {
           "groesse": "klein",
-          "beschreibung": "Einzelpraxis bis ca. 5 Mitarbeitende",
+          "beschreibung": "Einzelpraxis, 1-5 Mitarbeitende",
+          "ab": 1,
+          "bis": 5,
           "themen": [
             "Terminausfaelle ohne Erinnerungssystem",
             "Recall fuer Kontroll- und Prophylaxetermine von Hand",
@@ -129,7 +149,9 @@ window.ZEITFRESSER_FORM_DATA = {
         },
         {
           "groesse": "mittel",
-          "beschreibung": "Gemeinschaftspraxis mit mehreren Behandlern, ca. 6-20 Mitarbeitende",
+          "beschreibung": "Gemeinschaftspraxis mit mehreren Behandlern, 6-30 Mitarbeitende",
+          "ab": 6,
+          "bis": 30,
           "themen": [
             "Getrennte Patientenakten je Behandler",
             "Terminplanung ueber mehrere Behandler und Stuehle",
@@ -139,7 +161,9 @@ window.ZEITFRESSER_FORM_DATA = {
         },
         {
           "groesse": "gross",
-          "beschreibung": "Zahnaerztliches MVZ mit mehreren Standorten, ca. 21-100 Mitarbeitende",
+          "beschreibung": "Zahnaerztliches MVZ mit mehreren Standorten, ab 31 Mitarbeitende",
+          "ab": 31,
+          "bis": null,
           "themen": [
             "Insellösungen zwischen Standorten statt zentraler MVZ-Software",
             "Konsolidierte Abrechnung ueber KV, Privat und BG je Standort",
@@ -155,7 +179,9 @@ window.ZEITFRESSER_FORM_DATA = {
       "groessen": [
         {
           "groesse": "klein",
-          "beschreibung": "Einzelbuero oder kleines Planungsbuero bis ca. 5 Mitarbeitende",
+          "beschreibung": "Einzelbuero oder kleines Planungsbuero, 1-5 Mitarbeitende",
+          "ab": 1,
+          "bis": 5,
           "themen": [
             "Honorarberechnung und Angebot von Hand",
             "Belegsammlung und Aufbewahrungsfristen",
@@ -165,7 +191,9 @@ window.ZEITFRESSER_FORM_DATA = {
         },
         {
           "groesse": "mittel",
-          "beschreibung": "Planungsbuero mit mehreren Projektteams, ca. 6-30 Mitarbeitende",
+          "beschreibung": "Planungsbuero mit mehreren Projektteams, 6-30 Mitarbeitende",
+          "ab": 6,
+          "bis": 30,
           "themen": [
             "Kartierungsdaten aus dem Gelaende nacherfassen",
             "Projektcontrolling und Stunden auf Leistungsphasen",
@@ -175,7 +203,9 @@ window.ZEITFRESSER_FORM_DATA = {
         },
         {
           "groesse": "gross",
-          "beschreibung": "Planungsbuero mit mehreren Fachbereichen oder Standorten, ueber 30 Mitarbeitende",
+          "beschreibung": "Planungsbuero mit mehreren Fachbereichen oder Standorten, ab 31 Mitarbeitende",
+          "ab": 31,
+          "bis": null,
           "themen": [
             "Qualitaetssicherung und Freigaben ueber Fachbereiche",
             "Gebuendelte Vergaben ueber mehrere Fachrichtungen koordinieren",
@@ -190,7 +220,9 @@ window.ZEITFRESSER_FORM_DATA = {
       "groessen": [
         {
           "groesse": "klein",
-          "beschreibung": "Einzelunternehmer oder kleiner IT-Dienstleister bis ca. 5 Mitarbeitende",
+          "beschreibung": "Einzelunternehmer oder kleiner IT-Dienstleister, 1-5 Mitarbeitende",
+          "ab": 1,
+          "bis": 5,
           "themen": [
             "Supportanfragen ueber verstreute Kanaele",
             "Kleine Aufwaende gehen bei der Abrechnung verloren",
@@ -200,7 +232,9 @@ window.ZEITFRESSER_FORM_DATA = {
         },
         {
           "groesse": "mittel",
-          "beschreibung": "IT-Dienstleister mit mehreren Technikern, ca. 6-30 Mitarbeitende",
+          "beschreibung": "IT-Dienstleister mit mehreren Technikern, 6-30 Mitarbeitende",
+          "ab": 6,
+          "bis": 30,
           "themen": [
             "Wartungs- und Servicevertraege manuell fakturieren",
             "Lizenzbestand je Kunde nachhalten",
@@ -210,7 +244,9 @@ window.ZEITFRESSER_FORM_DATA = {
         },
         {
           "groesse": "gross",
-          "beschreibung": "Systemhaus oder Managed-Service-Provider, ueber 30 Mitarbeitende",
+          "beschreibung": "Systemhaus oder Managed-Service-Provider, ab 31 Mitarbeitende",
+          "ab": 31,
+          "bis": null,
           "themen": [
             "Erbrachte Leistungen zeitgenau abrechnen",
             "Ticketsystem waechst nicht mit den Serviceprozessen mit",

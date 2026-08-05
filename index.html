@@ -27,6 +27,12 @@
       <section class="step" id="step-groesse" hidden>
         <h2>2. Wie groß ist euer Betrieb?</h2>
         <ul id="groessen-liste" class="select-list"></ul>
+
+        <div class="feld-block feld-block-eng">
+          <label for="mitarbeiterzahl-input">Genaue Mitarbeiterzahl <span class="optional">(optional)</span></label>
+          <input type="number" id="mitarbeiterzahl-input" min="1" max="100000" step="1" inputmode="numeric" placeholder="z. B. 12">
+          <p id="groesse-hinweis" class="hinweis" hidden></p>
+        </div>
       </section>
 
       <section class="step" id="step-fragen" hidden>

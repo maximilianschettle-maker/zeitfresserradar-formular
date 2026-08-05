@@ -102,6 +102,9 @@ input[type="text"]:focus, textarea:focus {
 .feld-block { margin-bottom: 1.25rem; }
 .feld-block label, .feld-block > p { display: block; margin-bottom: 0.4rem; font-size: 0.92rem; }
 .optional { color: var(--muted); font-weight: 400; }
+.feld-block-eng { margin-top: 0.9rem; margin-bottom: 0; }
+.feld-block-eng input[type="number"] { width: 10rem; }
+#groesse-hinweis { margin-bottom: 0; }
 
 .lead-frage .radio-label {
   display: flex;

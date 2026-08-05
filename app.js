@@ -9,10 +9,11 @@ const ANDERE_VALUE = '__andere__'
 // Fuer nicht gelistete Branchen gibt es keine KB-Groessen. Diese generischen Stufen halten
 // die Schwellen identisch zu den KB-Tiers, damit eine spaetere Recherche weiss, welcher
 // Tier gemeint war - ohne Groesse liesse sich der Eintrag nicht einordnen.
+// Schwellen identisch zu den KB-Tiers (siehe ab/bis in data/zeitfresser-kb.json).
 const GENERISCHE_GROESSEN = [
-  { groesse: 'klein', beschreibung: 'Ein-Mann-Betrieb bis ca. 5 Mitarbeitende' },
-  { groesse: 'mittel', beschreibung: 'ca. 6-30 Mitarbeitende' },
-  { groesse: 'gross', beschreibung: 'ueber 30 Mitarbeitende' },
+  { groesse: 'klein', beschreibung: '1-5 Mitarbeitende', ab: 1, bis: 5 },
+  { groesse: 'mittel', beschreibung: '6-30 Mitarbeitende', ab: 6, bis: 30 },
+  { groesse: 'gross', beschreibung: 'ab 31 Mitarbeitende', ab: 31, bis: null },
 ]
 
 // Kennung aus dem personalisierten Link (z. B. ...?k=thomas-mueller). Wird unveraendert
@@ -33,6 +34,8 @@ const checkboxListe = document.getElementById('checkbox-liste')
 const freitextLabel = document.getElementById('freitext-label')
 const freitextInput = document.getElementById('freitext-input')
 const absenderInput = document.getElementById('absender-input')
+const mitarbeiterzahlInput = document.getElementById('mitarbeiterzahl-input')
+const groesseHinweis = document.getElementById('groesse-hinweis')
 const submitBtn = document.getElementById('submit-btn')
 const submitHinweis = document.getElementById('submit-hinweis')
 const form = document.getElementById('feedback-form')
@@ -97,11 +100,48 @@ function renderGroessen(groessen) {
 function selectGroesse(groesseEntry) {
   ausgewaehlteGroesse = groesseEntry
   updateSelectionStyles(groessenListe, (li) => li.firstChild.textContent === groesseEntry.groesse)
+  pruefeMitarbeiterzahl()
   if (ausgewaehlteBranche === ANDERE_VALUE) {
     renderFragenFuerAndereBranche()
   } else {
     renderFragenFuerBekannteBranche(groesseEntry)
   }
+}
+
+function getMitarbeiterzahl() {
+  const roh = mitarbeiterzahlInput.value.trim()
+  if (!roh) return null
+  const zahl = Number.parseInt(roh, 10)
+  return Number.isFinite(zahl) && zahl > 0 ? zahl : null
+}
+
+// Die Zahl korrigiert die Auswahl nicht - der Teilnehmer weiss besser, welcher Betriebstyp er
+// ist als unsere Schwellen. Der Hinweis macht den Widerspruch nur sichtbar, damit niemand
+// versehentlich die falschen Fragen beantwortet. Beide Werte gehen so oder so ins Sheet.
+function pruefeMitarbeiterzahl() {
+  const zahl = getMitarbeiterzahl()
+  if (zahl === null || !ausgewaehlteGroesse) {
+    groesseHinweis.hidden = true
+    return
+  }
+  const { ab, bis } = ausgewaehlteGroesse
+  const passt = (ab == null || zahl >= ab) && (bis == null || zahl <= bis)
+  if (passt) {
+    groesseHinweis.hidden = true
+    return
+  }
+  const passenderTier = verfuegbareGroessen().find(
+    (g) => (g.ab == null || zahl >= g.ab) && (g.bis == null || zahl <= g.bis)
+  )
+  groesseHinweis.textContent = passenderTier
+    ? `Mit ${zahl} Mitarbeitenden würden wir euch als „${passenderTier.groesse}" einordnen — du kannst trotzdem bei „${ausgewaehlteGroesse.groesse}" bleiben, wenn das besser passt.`
+    : `Mit ${zahl} Mitarbeitenden passt keine unserer Stufen richtig — wir schauen uns das an.`
+  groesseHinweis.hidden = false
+}
+
+function verfuegbareGroessen() {
+  if (ausgewaehlteBranche === ANDERE_VALUE) return GENERISCHE_GROESSEN
+  return ausgewaehlteBranche ? ausgewaehlteBranche.groessen : []
 }
 
 function updateSelectionStyles(list, matches) {
@@ -193,6 +233,7 @@ async function handleSubmit(event) {
     lead: getLeadWert(),
     kennung: kennung,
     absender: absenderInput.value.trim(),
+    mitarbeiterzahl: getMitarbeiterzahl() ?? '',
   }
 
   submitBtn.disabled = true
@@ -223,4 +264,5 @@ async function handleSubmit(event) {
 }
 
 form.addEventListener('submit', handleSubmit)
+mitarbeiterzahlInput.addEventListener('input', pruefeMitarbeiterzahl)
 renderBranchen()
