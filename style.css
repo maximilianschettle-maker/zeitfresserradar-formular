@@ -136,3 +136,25 @@ input[type="text"]:focus, textarea:focus {
 }
 .danke { background: rgba(91, 140, 255, 0.15); color: var(--text); }
 .fehler { background: rgba(255, 107, 107, 0.12); color: var(--error); }
+
+.datenschutz-hinweis { margin-bottom: 1rem; }
+
+a { color: var(--accent); }
+
+.seiten-fuss {
+  margin-top: 3rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+  font-size: 0.85rem;
+}
+.seiten-fuss a { color: var(--muted); }
+
+.rechtstext { font-size: 0.95rem; line-height: 1.6; }
+.rechtstext h3 { font-size: 0.95rem; margin-bottom: 0.3rem; margin-top: 1.4rem; }
+.rechtstext p { margin-top: 0; }
+.rechtstext code {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 0.05rem 0.3rem;
+}
