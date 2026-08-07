@@ -99,7 +99,8 @@ window.ZEITFRESSER_FORM_DATA = {
             "Terminkoordination per Telefon",
             "Stundenzettel auf Papier",
             "Materialbestellung ohne festen Prozess",
-            "Belegsammlung fuer die Steuer"
+            "Belegsammlung fuer die Steuer",
+            "Meldepflichten gegenueber Kammern und Behoerden"
           ]
         },
         {
